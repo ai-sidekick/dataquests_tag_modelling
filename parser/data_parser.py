@@ -89,7 +89,7 @@ class Crowler():
         json_data = json_data["topic_list"]
         more_topic = True if json_data.get("more_topics_url", False) else False
         raw_topics = json_data["topics"]
-        topics = ({"url": f"https://community.dataquest.io/t/{topic['slug']}",
+        topics = ({"url": f"https://discuss.airbyte.io/t/{topic['slug']}",
                 "topic_id": topic['id'],
                 "title": topic['title'],
                 "posts_count": topic["posts_count"],

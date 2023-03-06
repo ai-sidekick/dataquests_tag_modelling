@@ -6,8 +6,8 @@ MONGODB_SETTINGS = {
     'db': 'dataquest'
 }
 
-CATEGORY_URL = "https://community.dataquest.io/latest.json?ascending=false&no_definitions=true&page={page}"
-POSTS_URL = "https://community.dataquest.io/t/{post_id}/posts.json?{posts_ids}&include_suggested=true"
+CATEGORY_URL = "https://discuss.airbyte.io/latest.json?ascending=false&no_definitions=true&page={page}"
+POSTS_URL = "https://discuss.airbyte.io/t/{post_id}/posts.json?{posts_ids}&include_suggested=true"
 
 HEADERS = {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",

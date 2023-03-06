@@ -10,6 +10,7 @@ async def start_scan():
         crowler = Crowler(db_manager=mongo)
         await crowler.start(start_page=0)
         await crowler.stop()
+        mongo.writefiles()
     except Exception as e:
         logger.exception(e)
     finally:

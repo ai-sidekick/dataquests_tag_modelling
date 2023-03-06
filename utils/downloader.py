@@ -49,8 +49,12 @@ class Downloader:
             logger.info(f"Url {url} read from {file_name} cache")
         else:
             response_data = await self.request(method, url, *args, **kwargs)
-            if not response_data or b"Too Many Requests" in response_data:
+            if not response_data:
                 raise Exception("Not Data")
+            # Commented out because this string can appear in the response
+            elif b"Too Many Requests" in response_data:
+                print(url)
+                raise Exception("Too Many Requests")
             async with aopen(file_path, 'wb') as f:
                 await f.write(response_data)
             logger.info(f"Url {url} cached in {file_name} cache")
